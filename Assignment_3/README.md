@@ -14,9 +14,13 @@ Your goal is to relate a narrative using primitive shapes, colors, sound and mov
 
 #### Requirements
 Your story should include shapes (incl. polygons), movement, sound, images
+
 At least two "scenes" (You can scroll between scenes or draw a new one)
+
 A 5 minute experience
+
 A github link submitted to canvas with code, process assets, and the appropriate .md information
+
 An explanation of your process in the .md
 
 ## Project2:
@@ -27,8 +31,11 @@ Since all projects will cover a domain of time, a slider for each variable is re
 
 #### Requirements
 The visualization will include color, shapes, movement, text, fonts
+
 A UI to manually change each variable used
+
 A github link submitted to canvas with code, process assets, and the appropriate .md information
+
 An explanation of your process in the .md
 
 #### Optional
