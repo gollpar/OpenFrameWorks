@@ -8,7 +8,7 @@
 ### - What do you want them to experience?
 ### - How will your translation achieve this?
 
-### Project1:
+## Project1:
 #### Due: Sunday May 12th @ 12pm - Points: 15
 Your goal is to relate a narrative using primitive shapes, colors, sound and movement. All of the code should be bespoke (no functionality copied from online sources). It is highly recommended that you choose a story you are invested in telling and feel strongly about. The experience itself should require around 5 minutes from the user.
 
@@ -23,7 +23,7 @@ A github link submitted to canvas with code, process assets, and the appropriate
 
 An explanation of your process in the .md
 
-### Project2:
+## Project2:
 #### Due: Sunday May 12th @ 12pm - Points: 15
 Your goal is to translate a JSON data source into an intelligible visual form. All of the code should be bespoke (no functionality copied from online sources). The deliverable is not required to be a dashboard with associated UI (as you might see on a mobile). You are incouraged to think non-literally about the data source and and imagine an innovative or engaging experience that could be derived from the structure.
 
@@ -41,7 +41,7 @@ An explanation of your process in the .md
 #### Optional
 Alternate web-APIs will be provided in class. If you want to use a different API, come to me having already looked at the returned JSON data structure and propose your concept. If I approve, you can use it.
 
-### Project3:
+## Project3:
 #### Due: Sunday May 12th @ 12pm - Points: 15
 Your goal is to create a simple game. All of the code should be bespoke (no functionality copied from	online sources). Focus on simple mechanics and interactions and how you can engage with a user through a coherent visual and auditory style including but not limited to character creation and setting. You can optinally go for a typical score-based game or interactive story style experience.
 
