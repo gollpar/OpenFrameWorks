@@ -5,10 +5,10 @@
 
 ## Sketch - Project1
 
-![Media](media/circle.PNG)
-![Media](media/line.PNG)
-![Media](media/triangle.PNG)
-![Media](media/rectangle.PNG)
+![Media](media/circle.png)
+![Media](media/line.png)
+![Media](media/triangle.png)
+![Media](media/rectangle.png)
 
 
 
