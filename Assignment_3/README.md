@@ -4,9 +4,9 @@
 
 
 ## Concept Description for mt three projects
-### Who is the user?
-### What do you want them to experience?
-### How will your translation achieve this?
+### - Who is the user?
+### - What do you want them to experience?
+### - How will your translation achieve this?
 
 ### Project1:
 #### Due: Sunday May 12th @ 12pm - Points: 15
