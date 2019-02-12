@@ -65,6 +65,7 @@ An explanation of your process in the .md
 
 ### PROJECT1: 
 - CONCEPT: ISOLATION
+Using web of lines.
 
 ### PROJECT2: 
 - Translating weather to sounds.(sunny=> pop, cloudy=>classic, etc.)
