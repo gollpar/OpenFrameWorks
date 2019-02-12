@@ -64,15 +64,17 @@ An explanation of your process in the .md
 ## Drawings:
 
 ### PROJECT1: 
-CONCEPT: ISOLATION
+- CONCEPT: ISOLATION
 
 ### PROJECT2: 
--Translating weather to sounds. (sunny=> pop, cloudy=>classic, etc.)
--Translating weather to colors.
--Translating weather to shapes.
+- Translating weather to sounds.(sunny=> pop, cloudy=>classic, etc.)
+- Translating weather to colors.
+- Translating weather to shapes.
 
 ### PROJECT3:
--Using face tracker
--Playing with facial features (eyebrows' movement, blinking, etc.)
+- Using face tracker.
+- Playing with facial features (eyebrows' movement, blinking, etc.)
+- Body silhouette as the play ground.
+- Using kinect.
 
 
