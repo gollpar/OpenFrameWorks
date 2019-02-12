@@ -72,5 +72,7 @@ CONCEPT: ISOLATION
 -Translating weather to shapes.
 
 ### PROJECT3:
+-Using face tracker
+-Playing with facial features (eyebrows' movement, blinking, etc.)
 
 
