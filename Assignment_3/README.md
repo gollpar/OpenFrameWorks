@@ -62,6 +62,15 @@ An explanation of your process in the .md
 
 
 ## Drawings
-Working on it----
+
+### PROJECT1: 
+CONCEPT: ISOLATION
+
+### PROJECT2: 
+-Translating weather to sounds. (sunny=> pop, cloudy=>classic, etc.)
+-Translating weather to colors.
+-Translating weather to shapes.
+
+### PROJECT3:
 
 
