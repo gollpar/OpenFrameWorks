@@ -18,7 +18,7 @@ Move all shapes to their final destinations in 1 second and show each emotion fo
 ## Screenshots
 My cat https://www.instagram.com/gorbesun/
 
-![Screenshot](media/1.png)
+![Screenshot](media/2.png)
 
 
 
