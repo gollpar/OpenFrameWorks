@@ -24,6 +24,12 @@ void ofApp::draw(){
     ofDrawBezier(midX, midY, 534, 420, 554, 384, 549,midY);
     ofDrawTriangle(370, 330, 470, 300, 390, 260);
     ofDrawTriangle(645, 330, 544, 300, 624, 260);
+    //wiskers left
+    ofDrawLine(midX, midY-10, midX-200, midY-50);
+    ofDrawLine(midX, midY-10, midX-200, midY-10);
+    //wiskers right
+    ofDrawLine(midX, midY-10, midX+200, midY-50);
+    ofDrawLine(midX, midY-10, midX+200, midY-10);
 
 
 }
