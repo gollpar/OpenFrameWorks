@@ -15,5 +15,9 @@ In setup() set your framerate to 60 fps and set all shapes to their initial loca
 
 Move all shapes to their final destinations in 1 second and show each emotion for 2 seconds in a slideshow using ofGetFrameNum and the c++ modulo operator.
 
+## Screenshots
+
+![Screenshot](media/1.png)
+
 
 
