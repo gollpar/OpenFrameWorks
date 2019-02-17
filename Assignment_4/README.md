@@ -18,6 +18,9 @@ Move all shapes to their final destinations in 1 second and show each emotion fo
 ## Screenshots
 It is all about my cat (His IG: https://www.instagram.com/gorbesun/ )
 
+Normal:
+![Screenshot](media/1.png)
+Angry:
 ![Screenshot](media/2.png)
 
 
