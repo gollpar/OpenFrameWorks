@@ -54,6 +54,9 @@ void ofApp::draw(){
         //wiskers right
         ofDrawLine(midX, midY-10, midX+200, midY-5);
         ofDrawLine(midX, midY-10, midX+200, midY);
+        //eyebrows
+        ofDrawLine(midX+30, midY-60, midX+70, midY-70);
+        ofDrawLine(midX-30, midY-60, midX-70, midY-70);
         
         
     }
@@ -115,3 +118,4 @@ void ofApp::gotMessage(ofMessage msg){
 void ofApp::dragEvent(ofDragInfo dragInfo){
     
 }
+
