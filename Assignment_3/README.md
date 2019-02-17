@@ -59,9 +59,23 @@ A github link submitted to canvas with code, process assets, and the appropriate
 
 An explanation of your process in the .md
 
+------------------------------------------------------------------------
 
+## Drawings:
 
-## Drawings
+### PROJECT1: 
+- CONCEPT: ISOLATION
+Using web of lines.
 
+### PROJECT2: 
+- Translating weather to sounds.(sunny=> pop, cloudy=>classic, etc.)
+- Translating weather to colors.
+- Translating weather to shapes.
+
+### PROJECT3:
+- Using face tracker.
+- Playing with facial features (eyebrows' movement, blinking, etc.)
+- Body silhouette as the play ground.
+- Using kinect.
 
 
