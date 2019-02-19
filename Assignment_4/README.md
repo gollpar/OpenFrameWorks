@@ -23,7 +23,7 @@ Normal/ Happy/ Surprise lol :
 Angry:
 ![Screenshot](media/2.png)
 
-I have a problem, in the first slide, it shows both of my shapes and not only the first one.
+GIF:
 ![gif](media/giphy.gif)
 
 
