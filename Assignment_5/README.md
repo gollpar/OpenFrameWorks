@@ -1,30 +1,20 @@
-# Assigment_4
+# Assigment_5
 
 ## C++
 
 
-Make a new project which draws only the object with a face from the last assignment.
+Assignment
+Create a new project using the code from the last assignment.
 
-Move the shapes you used to create the face (adding more if necessary) to express:
+Currently emotions change over 1 second and the face is held for 1 second.
 
-happiness
-sadness
-surprise
-anger
-In setup() set your framerate to 60 fps and set all shapes to their initial locations.
+Convert one primitive shape to a polygon. (A poly mouth could be good here.)
 
-Move all shapes to their final destinations in 1 second and show each emotion for 2 seconds in a slideshow using ofGetFrameNum and the c++ modulo operator.
+Starting at each change, play a sound that you either created or downloaded (with attribution in your .md file). Make sure each sound is < 2 seconds.
+
+Since this project uses sound, you will have to upload a youtube file for your README.md .
 
 ## Screenshots
-It is all about my cat (His IG: https://www.instagram.com/gorbesun/ )
-
-Normal/ Happy/ Surprise lol :
-![Screenshot](media/1.png)
-Angry:
-![Screenshot](media/2.png)
-
-GIF:
-![gif](media/giphy.gif)
 
 
 
