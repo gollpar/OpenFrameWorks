@@ -65,7 +65,7 @@ An explanation of your process in the .md
 
 ### PROJECT1: 
 - CONCEPT: ISOLATION
-Using web of lines.
+Using a Kinect. The kinect traces the body's silhouette, when the user moves, all the existing shapes in the space ran away from him/her.
 
 ### PROJECT2: 
 - Translating weather to sounds.(sunny=> pop, cloudy=>classic, etc.)
