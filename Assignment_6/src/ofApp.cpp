@@ -6,6 +6,11 @@ ofPoint myMouse;
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofSetFrameRate(60);
+    
+    fbo.allocate(ofGetWidth(), ofGetHeight());
+    fbo.begin();
+    ofClear(255, 255, 255);
+    fbo.end();
 
 }
 
@@ -23,7 +28,14 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    
+    
     ofBackground(177, 224, 223);
+    
+    //fbo text
+    fbo.draw(0,0);
+    ofSetColor(0);
+    ofDrawBitmapString("A Love Story", 200, 107);
     
     if (drawFirst){
     ofSetColor(0);
@@ -274,7 +286,11 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-    int step = 10;
+    
+    //fbo.begin();
+    //fbo...
+    //fbo.end();
+    
     //if(key == 'f') myMouse.y = myMouse.y - step;
 }
 
