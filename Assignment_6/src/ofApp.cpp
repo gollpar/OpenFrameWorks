@@ -7,7 +7,7 @@ ofPoint myMouse;
 void ofApp::setup(){
     ofSetFrameRate(60);
     
-    fbo.allocate(ofGetWidth(), ofGetHeight());
+    fbo.allocate(200, 107, GL_RGBA);
     fbo.begin();
     ofClear(255, 255, 255);
     fbo.end();
@@ -23,6 +23,9 @@ void ofApp::update(){
     
     drawFirst = sec < 2;
     drawSecond = sec < 100;
+    
+    fbo.begin();
+    fbo.end();
 
 }
 
@@ -33,6 +36,7 @@ void ofApp::draw(){
     ofBackground(177, 224, 223);
     
     //fbo text
+ 
     fbo.draw(0,0);
     ofSetColor(0);
     ofDrawBitmapString("A Love Story", 200, 107);
