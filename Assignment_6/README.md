@@ -19,7 +19,9 @@ When key 'f' is pressed, toggle writing to a fading fbo instead of directly to t
 
 First scene:
 
+![Screenshot](media/1.gif)
 ![Screenshot](media/1.png)
+
 
 
 
