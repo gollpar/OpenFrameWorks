@@ -14,7 +14,11 @@ When key 'f' is pressed, toggle writing to a fading fbo instead of directly to t
 
 ### A Love Story
 
+<p>Moving the black cat's tail with arrow keys or mouse draggig.</p>
+<p>The gray cat moves to a given xy when the mouse button is clicked.</p>
+
 First scene:
+
 ![Screenshot](media/1.png)
 
 
