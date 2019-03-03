@@ -12,6 +12,8 @@ Choose a second element that moves to a given x,y when the mouse button is click
 
 When key 'f' is pressed, toggle writing to a fading fbo instead of directly to the screen
 
+### A Love Story
+
 First scene:
 ![Screenshot](media/1.png)
 
