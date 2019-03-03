@@ -1,6 +1,8 @@
 #include "ofApp.h"
 
 int sec ;
+ofPoint myMouse;
+
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofSetFrameRate(60);
@@ -163,7 +165,7 @@ void ofApp::draw(){
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
     int step = 10;
-    if(key == 'f') myMouse.y = myMouse.y - step;
+    //if(key == 'f') myMouse.y = myMouse.y - step;
 }
 
 //--------------------------------------------------------------
@@ -178,8 +180,8 @@ void ofApp::mouseMoved(int x, int y ){
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
-    myMouse.x = x;
-    myMouse.y = y;
+   myMouse.x = x;
+   myMouse.y = y;
 }
 
 //--------------------------------------------------------------
