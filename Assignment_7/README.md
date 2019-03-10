@@ -1,7 +1,9 @@
 # Assignment_7
 
 ## C++
-
+--------
+### My note: working on it
+-----------
 Assignment
 Create a new project using the code from the last emotion assignment.
 
