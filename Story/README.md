@@ -31,7 +31,7 @@ These two fall in love.
 
 -The gray cat moves to a given x when the left bottun is pressed.
 
-![Screenshot](media/1.gif)
+![Screenshot](Media/1.gif)
 
 
 
