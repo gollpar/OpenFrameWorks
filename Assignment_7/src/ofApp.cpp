@@ -1,3 +1,4 @@
+
 #include "ofApp.h"
 
 int midX, midY;
@@ -10,8 +11,11 @@ void ofApp::setup(){
     midY = ofGetWindowHeight() / 2;
     
     gui.setup();
-    gui.add(center.setup("center", ofVec2f(ofGetWidth()*.5, ofGetHeight()*.5), ofVec2f(0, 0), ofVec2f(ofGetWidth(), ofGetHeight())));
-    gui.add(radius.setup("radius", 140, 10, 300));
+    gui.add(intSlider.setup("int slider", 0,0,300));
+    gui.add(floatSlider.setup("float slider", 33.33, 0.0, 66.66));
+    gui.add(toggle.setup("toggle", true));
+    gui.add(button.setup("button"));
+    
     
 }
 
@@ -26,7 +30,7 @@ void ofApp::update(){
     sec = (ofGetFrameNum() / 60) % 60;
     
     //drawFirst = sec < 2;
-    //drawSecond = sec < 4;
+   //drawSecond = sec < 4;
     
 }
 
@@ -34,7 +38,9 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     ofSetColor(160,82,45);
+    gui.draw();
     
+    //drawFirst
         ofDrawTriangle(502, 364, midX, midY, 522, 364);
         ofDrawCircle(midX+50, midY-50, 7);
         ofDrawCircle(midX-50, midY-50, 7);
@@ -49,7 +55,7 @@ void ofApp::draw(){
         //wiskers right
         ofDrawLine(midX, midY-10, midX+200, midY-50);
         ofDrawLine(midX, midY-10, midX+200, midY-10);
-  
+    //drawSecond
         ofDrawTriangle(502, 364, midX, midY, 522, 364);
         ofDrawCircle(midX+50, midY-50, 10);
         ofDrawCircle(midX-50, midY-50, 10);
@@ -68,7 +74,10 @@ void ofApp::draw(){
         ofDrawLine(midX+30, midY-60, midX+70, midY-70);
         ofDrawLine(midX-30, midY-60, midX-70, midY-70);
         
-        gui.draw();
+        
+    
+    
+    
 }
 
 //--------------------------------------------------------------
@@ -125,4 +134,3 @@ void ofApp::gotMessage(ofMessage msg){
 void ofApp::dragEvent(ofDragInfo dragInfo){
     
 }
-
