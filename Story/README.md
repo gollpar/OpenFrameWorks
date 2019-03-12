@@ -33,6 +33,8 @@ These two fall in love.
 
 ![Screenshot](Media/1.gif)
 
+Adding a gui slider to have more control over the black cat:
+![Screenshot](Media/2.gif)
 
 
 
