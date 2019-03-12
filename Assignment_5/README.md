@@ -3,8 +3,6 @@
 ## C++
 
 
-<<<<<<< HEAD
-=======
 Assignment
 Create a new project using the code from the last assignment.
 
@@ -17,7 +15,7 @@ Starting at each change, play a sound that you either created or downloaded (wit
 Since this project uses sound, you will have to upload a youtube file for your README.md .
 
 ## Screenshots
->>>>>>> 3116336e8fb7a31cdbf151b2c4ffc169205cb26f
+
 
 
 

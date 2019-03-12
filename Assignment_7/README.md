@@ -34,7 +34,7 @@ From the guiExample .h file, what types of sliders are available?
 
 If the difference between them is in their return value, what do they return and how does this affect the values you can pass to setup?
 
-
+![Screenshot](media/1.png)
 
 
 
