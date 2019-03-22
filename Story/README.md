@@ -36,7 +36,7 @@ These two fall in love.
 Adding a gui slider to have more control over the black cat:
 ![Screenshot](Media/2.gif)
 
-
-
+### Second scene:
+![Screenshot](Media/3.gif)
 
 
