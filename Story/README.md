@@ -41,7 +41,7 @@ Adding a gui slider to have more control over the black cat:
 
 ## Final:
 ## Combining two scenes:
-![Screenshot](media/4.gif)
+![Screenshot](Media/4.gif)
 
 
 
