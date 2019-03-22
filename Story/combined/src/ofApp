@@ -1,0 +1,644 @@
+#include "ofApp.h"
+
+int sec ;
+//ofPoint myMouse;
+
+int tailx =299.35;
+int taily =595;
+
+//gui slider
+ofVec2f cat1;
+ofVec2f cat2;
+
+
+//--------------------------------------------------------------
+void ofApp::setup(){
+    
+    ofSetFrameRate(60);
+    
+    //gui slider secen1
+    gui.setup();
+    gui.add(posX.set("Move black cat", 350, 240, 500));
+    
+    gui.add(color.set("Black cat color", 0, 0, 255));
+    
+//    gui.add(toggle.setup("toggle", true));
+//    gui.add(button.setup("GO TO Second scene"));
+    
+    cat1.set(0,0);
+    cat2.set(0,0);
+    
+    //tail
+    fbo.allocate(200, 107, GL_RGBA);
+    fbo.begin();
+    ofClear(255, 255, 255);
+    fbo.end();
+    
+    //gui slider scene2
+    gui.setup();
+    gui.add(posX.set("Move black cat", 350, 240, 500));
+    
+    gui.add(color.set("Black cat color", 0, 0, 255));
+    
+//    gui.add(toggle.setup("toggle", true));
+//    gui.add(button.setup("GO TO First scene"));
+
+    
+    
+}
+
+bool drawFirst = true;
+bool drawSecond = true;
+
+bool tail = true;
+//--------------------------------------------------------------
+void ofApp::update(){
+    if (isSceneTwo) {
+        sec = (ofGetFrameNum() / 60) % 60;
+        
+        drawFirst = sec < 2;
+        drawSecond = sec < 100;
+        
+        fbo.begin();
+        fbo.end();
+    } else {
+        // THIS IS WHERE UPDATE STUFF FROM SCENE 2 GOES
+        fbo.begin();
+        fbo.end();
+        cout << "ADD  " << posX - movex << endl;
+        if (490 < posX - movex  && posX - movex < 526) {
+            // we are touching hands
+            areTouchingHands = true;
+        } else {
+            areTouchingHands = false;
+        }
+    }
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::draw(){
+    
+    if (isSceneTwo) {
+        
+        
+        ofBackground(177, 224, 223);
+        
+        //fbo text
+        fbo.draw(0,0);
+        ofSetColor(0);
+        ofDrawBitmapString("A Love Story", 350, 120);
+        ofDrawBitmapString("G0 to the second scene: press  down", 13, 760);
+        
+        //gui color
+        ofColor newColor = color.get();
+        cout << newColor << endl;
+        
+        
+        if (drawFirst){
+            //tree
+            ofSetColor(0);
+            ofPolyline tree;
+            tree.addVertex(798.32, 0);
+            tree.addVertex(813.58, 365.36);
+            tree.addVertex(639.58, 409.59);
+            tree.addVertex(555.59, 381.84);
+            tree.addVertex(491.09, 381.84);
+            tree.addVertex(495.59, 402.09);
+            tree.addVertex(555.59, 402.09);
+            tree.addVertex(615.59, 423.09);
+            tree.addVertex(509.09, 455.24);
+            tree.addVertex(233.1, 436.59);
+            tree.addVertex(233.1, 460.59);
+            tree.addVertex(512, 487.59);
+            tree.addVertex(811.57, 409.59);
+            tree.addVertex(799.81, 768);
+            tree.draw();
+            
+            //black cat
+            ofSetColor(newColor);
+            //left ear
+            //posX=380
+            ofDrawTriangle(posX+1.81 , 202.06, posX+60.05, 237.12, posX+12.27, 266.1);
+            //right ear
+            ofDrawTriangle(posX+89.62, 237.92, posX+138.51, 205.69, posX+119.26, 305.5);
+            //face
+            ofDrawRectangle(posX+18.56, 236.96, 100, 68);
+            ofDrawTriangle(posX+119.3, 237.37, posX+138.77, 288.34, posX+119.9, 305.5);
+            ofDrawTriangle(posX+18.56, 237.96, posX+4.58, 283.65, posX+19.06, 305.5);
+            
+            //ear lines
+            ofSetColor(255,255,255);
+            ofPolyline earl;
+            earl.addVertex(posX+20.2, 248.6);
+            earl.addVertex(posX+16.31, 220.79);
+            earl.addVertex(posX+41.85, 236.18);
+            earl.draw();
+            
+            ofPolyline earr;
+            ofSetColor(255,255,255);
+            earr.addVertex(posX+108.14, 239.44);
+            earr.addVertex(posX+124.84, 227.48);
+            earr.addVertex(posX+123.64, 252.57);
+            earr.draw();
+            
+            //eyes
+            ofSetColor(255,255,255);
+            ofDrawCircle(posX+53.19, 262.96, 3);
+            ofDrawCircle(posX+86.41, 263.97, 3);
+            
+            //nose
+            ofSetColor(255,255,255);
+            ofPolyline nose;
+            nose.addVertex(posX+61.68, 275.14);
+            nose.addVertex(posX+77.56, 274.24);
+            nose.addVertex(posX+70.02, 281.04);
+            nose.close();
+            nose.draw();
+            
+            //lips
+            //left
+            ofSetColor(255,255,255);
+            ofPolyline lipl;
+            lipl.addVertex(posX+70.02, 281.04);
+            lipl.addVertex(posX+65.83, 291.39);
+            lipl.addVertex(posX+53.53, 293.09);
+            lipl.addVertex(posX+48.41, 285.18);
+            
+            lipl.draw();
+            
+            //right
+            ofPolyline lipr;
+            lipr.addVertex(posX+70.02, 281.04);
+            lipr.addVertex(posX+77.78, 290.35);
+            lipr.addVertex(posX+89.26, 290.04);
+            lipr.addVertex(posX+93.68, 284.15);
+            
+            lipr.draw();
+            
+            //lop
+            ofSetColor(255, 204, 255);
+            ofDrawCircle(posX+35.22, 285.86, 10.28);
+            ofDrawCircle(posX+106.15, 285.86, 10.28);
+            
+            //sibil
+            ofSetColor(255,255,255);
+            ofDrawLine(posX+54.2, 277.19, posX-15.81, 263.86);
+            ofDrawLine(posX+53.93, 278.89, posX+17.13, 278.77);
+            
+            ofDrawLine(posX+85.83, 276.94, posX+154.38, 269.32);
+            ofDrawLine(posX+86.53, 279.35, posX+120.98, 280.52);
+            
+            //body
+            ofSetColor(newColor);
+            ofDrawRectangle(posX+10.4, 305.5, 67.16, 175);
+            ofDrawTriangle(posX-12.5, 339, posX+10.4, 305.5, posX+10.4, 468.35);
+            
+            //tail
+            // shows mouse opsirion: ofDrawBitmapString(ofGetMouseX(), 100, 100);
+            ofPushMatrix();
+            //ofSetLineWidth(5);
+            float m =ofMap(mouseX,0, ofGetWidth(),263 ,126);
+            ofTranslate(posX+34.5, 480);
+            ofRotateZDeg(m);
+            drawTail(0,0);
+            
+            ofPopMatrix();
+            
+            //glass glare
+            ofSetColor(255,255,255);
+            ofDrawLine(149.98, 566.45, 578.7, 108.49);
+            ofDrawLine(265.52, 583.27, 782.08, 97.49);
+            
+        }
+        else if (drawSecond){
+            
+            //drawFirst again
+            
+            
+            //tree
+            ofSetColor(0);
+            ofPolyline tree;
+            tree.addVertex(798.32, 0);
+            tree.addVertex(813.58, 365.36);
+            tree.addVertex(639.58, 409.59);
+            tree.addVertex(555.59, 381.84);
+            tree.addVertex(491.09, 381.84);
+            tree.addVertex(495.59, 402.09);
+            tree.addVertex(555.59, 402.09);
+            tree.addVertex(615.59, 423.09);
+            tree.addVertex(509.09, 455.24);
+            tree.addVertex(233.1, 436.59);
+            tree.addVertex(233.1, 460.59);
+            tree.addVertex(512, 487.59);
+            tree.addVertex(811.57, 409.59);
+            tree.addVertex(799.81, 768);
+            tree.draw();
+            
+            ofSetColor(newColor);
+            //left ear
+            //posX=380
+            ofDrawTriangle(posX+1.81 , 202.06, posX+60.05, 237.12, posX+12.27, 266.1);
+            //right ear
+            ofDrawTriangle(posX+89.62, 237.92, posX+138.51, 205.69, posX+119.26, 305.5);
+            //face
+            ofDrawRectangle(posX+18.56, 236.96, 100, 68);
+            ofDrawTriangle(posX+119.3, 237.37, posX+138.77, 288.34, posX+119.9, 305.5);
+            ofDrawTriangle(posX+18.56, 237.96, posX+4.58, 283.65, posX+19.06, 305.5);
+            
+            //ear lines
+            ofSetColor(255,255,255);
+            ofPolyline earl;
+            earl.addVertex(posX+20.2, 248.6);
+            earl.addVertex(posX+16.31, 220.79);
+            earl.addVertex(posX+41.85, 236.18);
+            earl.draw();
+            
+            ofPolyline earr;
+            ofSetColor(255,255,255);
+            earr.addVertex(posX+108.14, 239.44);
+            earr.addVertex(posX+124.84, 227.48);
+            earr.addVertex(posX+123.64, 252.57);
+            earr.draw();
+            
+            //eyes
+            ofSetColor(255,255,255);
+            ofDrawCircle(posX+53.19, 262.96, 3);
+            ofDrawCircle(posX+86.41, 263.97, 3);
+            
+            //nose
+            ofSetColor(255,255,255);
+            ofPolyline nose;
+            nose.addVertex(posX+61.68, 275.14);
+            nose.addVertex(posX+77.56, 274.24);
+            nose.addVertex(posX+70.02, 281.04);
+            nose.close();
+            nose.draw();
+            
+            //lips
+            //left
+            ofSetColor(255,255,255);
+            ofPolyline lipl;
+            lipl.addVertex(posX+70.02, 281.04);
+            lipl.addVertex(posX+65.83, 291.39);
+            lipl.addVertex(posX+53.53, 293.09);
+            lipl.addVertex(posX+48.41, 285.18);
+            
+            lipl.draw();
+            
+            //right
+            ofPolyline lipr;
+            lipr.addVertex(posX+70.02, 281.04);
+            lipr.addVertex(posX+77.78, 290.35);
+            lipr.addVertex(posX+89.26, 290.04);
+            lipr.addVertex(posX+93.68, 284.15);
+            
+            lipr.draw();
+            
+            //lop
+            ofSetColor(255, 204, 255);
+            ofDrawCircle(posX+35.22, 285.86, 10.28);
+            ofDrawCircle(posX+106.15, 285.86, 10.28);
+            
+            //sibil
+            ofSetColor(255,255,255);
+            ofDrawLine(posX+54.2, 277.19, posX-15.81, 263.86);
+            ofDrawLine(posX+53.93, 278.89, posX+17.13, 278.77);
+            
+            ofDrawLine(posX+85.83, 276.94, posX+154.38, 269.32);
+            ofDrawLine(posX+86.53, 279.35, posX+120.98, 280.52);
+            
+            //body
+            ofSetColor(newColor);
+            ofDrawRectangle(posX+10.4, 305.5, 67.16, 175);
+            ofDrawTriangle(posX-12.5, 339, posX+10.4, 305.5, posX+10.4, 468.35);
+            
+        
+            
+            //tail
+            // shows mouse opsirion:  ofDrawBitmapString(ofGetMouseX(), 100, 100);
+            ofPushMatrix();
+            //ofSetLineWidth(5); - CHANGES ALL the strokes!
+            float m =ofMap(mouseX,0, ofGetWidth(),263 ,126);
+            ofTranslate(posX+34.5, 480);
+            ofRotateZDeg(m);
+            drawTail(0,0);
+            ofPopMatrix();
+            
+            //glass glare
+            ofSetColor(255,255,255);
+            ofDrawLine(149.98, 566.45, 578.7, 108.49);
+            ofDrawLine(265.52, 583.27, 782.08, 97.49);
+            
+            //drawSecond
+            //cat2
+            
+            
+            ofPushMatrix();
+            ofTranslate(movex, movey);
+            //ears
+            ofSetColor(150, 150, 150);
+            ofDrawTriangle(606.59, 534.08, 590.09, 441.09, 672.58, 478.59);
+            ofDrawTriangle(782.08, 478.59, 876.57, 441.09, 851.07, 528.08);
+            //face
+            ofDrawRectangle(606.59, 478.59, 244.49, 140.99);
+            ofDrawTriangle(606.59, 534.08, 606.59, 619.58, 574.34, 576.08);
+            ofDrawTriangle(851.07, 528.08, 884.07, 565.58, 851.07, 619.58);
+            //sibil
+            //right
+            ofDrawLine(837.81, 559.73, 957.69, 521.8);
+            ofDrawLine(840.5, 570.05, 920.89, 584.7);
+            //left
+            ofDrawLine(658.25, 570.65, 490.43, 527.51);
+            ofDrawLine(641.53, 574.35, 538.64, 599.23);
+            //body
+            ofDrawRectangle(606.59, 619.58, 244.49, 150);
+            ofDrawTriangle(606.59, 619.58, 606.55, 768, 574.34, 769.57);
+            ofDrawTriangle(851.07, 768, 940.13, 771.57, 851.07, 619.58);
+            
+        }
+        
+        ofPopMatrix();
+        
+        //draw gui
+        gui.draw();
+        
+    } else {
+        
+        // THIS IS WHERE EVERYTHING FROM SCENE 2 GOES
+        ofSetColor(0, 0, 0);
+        ofDrawBitmapString("G0 to the first scene: press  Up", 13, 760);
+        
+        if (areTouchingHands) {
+            //text
+            fbo.draw(0,0);
+            ofSetColor(229,0,0);
+            ofDrawBitmapString("I Meow you <3", 358.38, 207);
+            //heart
+            ofSetColor(229,0,0);
+            ofPolyline heart;
+            heart.addVertex(436.19, 340.38);
+            heart.addVertex(262.64, 227.62);
+            heart.addVertex(338.72, 97.49);
+            heart.addVertex(424.5 , 153.1);
+            heart.addVertex(492.5, 90.5);
+            heart.addVertex(599.09, 204.1);
+            heart.close();
+            heart.draw();
+            
+            
+        } else {
+//            ofBackground(177, 224, 223);
+        }
+        
+        //gui color
+        ofColor newColor = color.get();
+        
+        
+        //tree
+        ofSetColor(0);
+        ofPolyline tree;
+        tree.addVertex(798.32, 0);
+        tree.addVertex(813.58, 365.36);
+        tree.addVertex(639.58, 409.59);
+        tree.addVertex(555.59, 381.84);
+        tree.addVertex(491.09, 381.84);
+        tree.addVertex(495.59, 402.09);
+        tree.addVertex(555.59, 402.09);
+        tree.addVertex(615.59, 423.09);
+        tree.addVertex(509.09, 455.24);
+        tree.addVertex(233.1, 436.59);
+        tree.addVertex(233.1, 460.59);
+        tree.addVertex(512, 487.59);
+        tree.addVertex(811.57, 409.59);
+        tree.addVertex(799.81, 768);
+        tree.draw();
+        
+        
+        // black cat
+        ofSetColor(newColor);
+        
+        //left ear
+        //posX=290
+        ofDrawTriangle(posX+8.74 , 381.86, posX+128.02, 453.68, posX+30.16, 513.01);
+        
+        //right ear
+        ofDrawTriangle(posX+288.7, 389.3, posX+271.67, 519.6, posX+188.57, 455.31);
+        
+        //face
+        ofDrawRectangle(posX+43.03, 453.34 ,206.32, 139.94);
+        //left
+        ofDrawTriangle(posX+43.03, 453.34, posX+44.06, 593.71, posX+14.41, 548.97);
+        //right
+        ofDrawTriangle(posX+249.35, 454.17, posX+289.22, 558.57, posX+249.27, 593.71);
+        
+        //ear lines
+        ofSetColor(255,255,255);
+        ofPolyline earl;
+        earl.addVertex(posX+46.04, 477.18);
+        earl.addVertex(posX+38.85, 420.23);
+        earl.addVertex(posX+90.73, 451.75);
+        earl.draw();
+        
+        ofPolyline earr;
+        ofSetColor(255,255,255);
+        earr.addVertex(posX+226.49, 458.41);
+        earr.addVertex(posX+260.69, 433.93);
+        earr.addVertex(posX+258.24, 458.3);
+        earr.draw();
+        
+        //eyes
+        ofSetColor(255,255,255);
+        ofDrawCircle(posX+113.96, 506.58, 5.4);
+        ofDrawCircle(posX+182, 508.67, 5.4);
+        
+        //nose
+        ofSetColor(255,255,255);
+        ofPolyline nose;
+        nose.addVertex(posX+131.35, 531.53);
+        nose.addVertex(posX+163.88, 529.7);
+        nose.addVertex(posX+148.44, 544.36);
+        nose.close();
+        nose.draw();
+        
+        //lips
+        //left
+        ofSetColor(255,255,255);
+        ofPolyline lipl;
+        lipl.addVertex(posX+148.44, 544.36);
+        lipl.addVertex(posX+139.86, 564.8);
+        lipl.addVertex(posX+114.65, 568.29);
+        lipl.addVertex(posX+104.17, 552.1);
+        lipl.draw();
+        
+        //right
+        ofPolyline lipr;
+        lipr.addVertex(posX+148.44, 544.36);
+        lipr.addVertex(posX+164.31, 562.67);
+        lipr.addVertex(posX+187.83, 562.04);
+        lipr.addVertex(posX+196.88, 549.99);
+        lipr.draw();
+        
+        //lop
+        ofSetColor(255, 204, 255);
+        ofDrawCircle(posX+77.16, 553.28, 22.78);
+        ofDrawCircle(posX+222.43, 543.67, 22.78);
+        
+        //sibil
+        ofSetColor(255,255,255);
+        ofDrawLine(posX+116.04, 535.73, posX-27.36, 508.42);
+        ofDrawLine(posX+115.48, 539.2, posX+40.11, 538.97);
+        
+        ofDrawLine(posX+180.82, 535.21, posX+321.21, 519.06);
+        ofDrawLine(posX+182.24, 540.16, posX+252.79, 542.54);
+        
+        //body
+        ofSetColor(newColor);
+        ofDrawRectangle(posX+65.12, 594.05, 137.92, 176.32);
+        ofDrawTriangle(posX+203.04, 587.55, posX+261.57, 770.08, posX+203.04, 770.71);
+        
+        
+        //paw
+        ofDrawRectangle(posX+8.74, 641.58, 79.97, 32);
+        ofDrawCircle(posX-3.34, 649.26, 29.67);
+        ofSetColor(255, 204, 255);
+        ofDrawCircle(posX-2.53, 656.29, 14.08);
+        ofDrawCircle(posX-21.42, 644.51, 5.93);
+        ofDrawCircle(posX-12, 634.64, 5.93);
+        ofDrawCircle(posX+0.87, 632.42, 5.93);
+        ofDrawCircle(posX+12.41, 639.58, 5.93);
+        
+        
+        //glass glare
+        ofSetColor(255,255,255);
+        ofDrawLine(149.98, 566.45, 578.7, 108.49);
+        ofDrawLine(265.52, 583.27, 782.08, 97.49);
+        
+        
+        //cat2- gray cat
+        
+        
+        ofPushMatrix();
+        ofTranslate(movex, movey);
+        //ears
+        ofSetColor(150, 150, 150);
+        ofDrawTriangle(606.59, 534.08, 590.09, 441.09, 672.58, 478.59);
+        ofDrawTriangle(782.08, 478.59, 876.57, 441.09, 851.07, 528.08);
+        //face
+        ofDrawRectangle(606.59, 478.59, 244.49, 140.99);
+        ofDrawTriangle(606.59, 534.08, 606.59, 619.58, 574.34, 576.08);
+        ofDrawTriangle(851.07, 528.08, 884.07, 565.58, 851.07, 619.58);
+        //sibil
+        //right
+        ofDrawLine(837.81, 559.73, 957.69, 521.8);
+        ofDrawLine(840.5, 570.05, 920.89, 584.7);
+        //left
+        ofDrawLine(658.25, 570.65, 490.43, 527.51);
+        ofDrawLine(641.53, 574.35, 538.64, 599.23);
+        //body
+        ofDrawRectangle(606.59, 619.58, 244.49, 150);
+        ofDrawTriangle(606.59, 619.58, 606.55, 768, 574.34, 769.57);
+        ofDrawTriangle(851.07, 768, 940.13, 771.57, 851.07, 619.58);
+        //paw
+        ofDrawRectangle(516.49, 660.69, 102.33, 34.89);
+        ofDrawCircle(511.12, 672.82, 31.24);
+        
+        ofPopMatrix();
+        
+        //draw gui
+        gui.draw();
+        
+    }
+    }
+
+
+//--------------------------------------------------------------
+void ofApp::keyPressed(int key){
+    if(key == OF_KEY_LEFT){
+        movex = movex-100;
+        movey=0;
+        
+        if(movex<-600){
+            movex =ofGetWidth()-200;
+         }
+    }
+        
+   if(key == OF_KEY_RIGHT){
+            movex = movex+100;
+            movey=0;
+       
+   }
+    if (key == OF_KEY_DOWN){
+        isSceneTwo = false;
+    }
+    if (key == OF_KEY_UP) {
+        isSceneTwo = true;
+    }
+}
+//-------------------------------------------------------------
+    
+void ofApp::drawTail(float x, float y){
+    
+    
+    ofSetColor(0);
+    ofPolyline tail;
+    
+    //tail movement
+    tail.addVertex(x, y);
+    tail.addVertex(x+73, y-75.5);
+    tail.addVertex(x-52.5, y-133);
+    tail.addVertex(x-115.15 ,y);
+    tail.draw();
+    
+}
+//--------------------------------------------------------------
+void ofApp::keyReleased(int key){
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseMoved(int x, int y ){
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseDragged(int x, int y, int button){
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::mousePressed(int x, int y, int button){
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseReleased(int x, int y, int button){
+    tail = true;
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseEntered(int x, int y){
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::mouseExited(int x, int y){
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::windowResized(int w, int h){
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::gotMessage(ofMessage msg){
+    
+}
+
+//--------------------------------------------------------------
+void ofApp::dragEvent(ofDragInfo dragInfo){
+    
+}
+
