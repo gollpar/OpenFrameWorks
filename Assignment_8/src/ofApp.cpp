@@ -14,6 +14,15 @@ void ofApp::setup(){
     } else {
         ofLogNotice("ofApp::setup") << "Failed to parse JSON.";
     }
+    
+    //gui slider
+    gui.setup();
+    gui.add(posX.set("Temperature", 800, 800, 500));
+    
+    gui.add(color.set("Back ground color", 0, 0, 800));
+    
+    gui.add(toggle.setup("toggle", true));
+    gui.add(button.setup("GO TO First scene"));
 }
 
 //--------------------------------------------------------------
@@ -33,7 +42,7 @@ void ofApp::draw(){
     ofBackground(result);
     
     
-
+    
     std::string hightemp  = json["daily"]["data"][1]["temperatureHigh"].asString();
     std::string summary  = json["daily"]["data"][1]["summary"].asString();
     std::string sunrise  = json["daily"]["data"][0]["sunriseTime"].asString();
@@ -41,18 +50,19 @@ void ofApp::draw(){
     
     
     
-   // std::string text = hightemp + "-" + summary + "-" + sunrise + "-" + sunset;
+    // std::string text = hightemp + "-" + summary + "-" + sunrise + "-" + sunset;
     
-     ofDrawBitmapString(hightemp, 20,  40);
-     ofDrawBitmapString(summary, 20,  80);
-     ofDrawBitmapString(sunrise, 20,  100);
-     ofDrawBitmapString(sunset, 20,  120);
+    ofDrawBitmapString(hightemp, 20,  40);
+    ofDrawBitmapString(summary, 20,  80);
+    ofDrawBitmapString(sunrise, 20,  100);
+    ofDrawBitmapString(sunset, 20,  120);
     
-   // ofDrawBitmapString(text, 20, 40);
+    // ofDrawBitmapString(text, 20, 40);
+    
+    //draw gui
+    gui.draw();
     
     
-  
-
     
     
 }
@@ -111,4 +121,5 @@ void ofApp::gotMessage(ofMessage msg){
 void ofApp::dragEvent(ofDragInfo dragInfo){
     
 }
+
 
