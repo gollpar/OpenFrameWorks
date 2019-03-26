@@ -57,7 +57,7 @@ Adding a gui slider to have more control over the black cat:
 
 ## Final scene:
 ## Combining two scenes:
-You can toggle between the two scenes by pushing the up and down arrow key on the keyboard. 
+You can toggle between the two scenes by pushing the up and down arrow keys on the keyboard. 
 <img src="Media/5.gif" width="1000">
 
 
