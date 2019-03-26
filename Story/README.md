@@ -31,7 +31,8 @@ The indoor cat's name is Gorbesun (aka my cat):
 
 
 
-A black cat is sitting on a tree. A gray cat is watching her inside a home from a window. 
+The Story: 
+  A black cat is sitting on a tree. A gray cat is watching her inside a home from a window. 
 These two fall in love.
 
 ### First scene:
@@ -44,16 +45,17 @@ These two fall in love.
 
 Adding a gui slider to have more control over the black cat:
 ![Screenshot](Media/2.gif)
+  
 ### Second scene:
 ![Screenshot](Media/3.gif)
-
+  
 ### When touching paws a heart appears + adding the window frame
 ![Screenshot](Media/4.gif)
 
 
 ## Final scene:
 ## Combining two scenes:
-![Screenshot](Media/5.gif)
+<img src="Media/5.gif" width="1000">
 
 
 
