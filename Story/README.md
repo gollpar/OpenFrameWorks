@@ -20,7 +20,7 @@ An explanation of your process in the .md
 
 -----------------------------------------
 
-## My story: A Love Story
+# My story: A Love Story
 The story is about a stray cat falling in love with an indoor cat. It is based on the true story:
 
 The black cat's name is Katayoon (aka the stray cat):
@@ -33,7 +33,7 @@ The indoor cat's name is Gorbesun (aka my cat):
 
 
 
-The Story: 
+   The Story: 
   A black cat is sitting on a tree. A gray cat is watching her inside a home from a window. 
 These two fall in love.
 
@@ -57,6 +57,7 @@ Adding a gui slider to have more control over the black cat:
 
 ## Final scene:
 ## Combining two scenes:
+You can toggle between the two scenes by pushing the up and down arrow key on the keyboard. 
 <img src="Media/5.gif" width="1000">
 
 
