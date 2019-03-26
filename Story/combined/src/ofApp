@@ -22,8 +22,7 @@ void ofApp::setup(){
     
     gui.add(color.set("Black cat color", 0, 0, 255));
     
-//    gui.add(toggle.setup("toggle", true));
-//    gui.add(button.setup("GO TO Second scene"));
+
     
     cat1.set(0,0);
     cat2.set(0,0);
@@ -40,10 +39,7 @@ void ofApp::setup(){
     
     gui.add(color.set("Black cat color", 0, 0, 255));
     
-//    gui.add(toggle.setup("toggle", true));
-//    gui.add(button.setup("GO TO First scene"));
 
-    
     
 }
 
@@ -84,10 +80,19 @@ void ofApp::draw(){
         
         ofBackground(177, 224, 223);
         
+       // window frame
+        //draw the window
+        ofSetColor(0);
+        ofDrawRectangle(0, 0, 1024, 40);
+        ofDrawRectangle(984, 0, 40, 768);
+        ofDrawRectangle(0, 0, 40, 768);
+        ofDrawRectangle(0, 728, 1024, 40);
+        
         //fbo text
         fbo.draw(0,0);
         ofSetColor(0);
         ofDrawBitmapString("A Love Story", 350, 120);
+        ofSetColor(255,255,255);
         ofDrawBitmapString("G0 to the second scene: press  down", 13, 760);
         
         //gui color
@@ -332,8 +337,6 @@ void ofApp::draw(){
             
             //drawSecond
             //cat2
-            
-            
             ofPushMatrix();
             ofTranslate(movex, movey);
             //ears
@@ -366,8 +369,9 @@ void ofApp::draw(){
     } else {
         
         // THIS IS WHERE EVERYTHING FROM SCENE 2 GOES
-        ofSetColor(0, 0, 0);
-        ofDrawBitmapString("G0 to the first scene: press  Up", 13, 760);
+   
+        
+   
         
         if (areTouchingHands) {
             //text
@@ -513,6 +517,18 @@ void ofApp::draw(){
         ofSetColor(255,255,255);
         ofDrawLine(149.98, 566.45, 578.7, 108.49);
         ofDrawLine(265.52, 583.27, 782.08, 97.49);
+        
+        
+        // window frame
+        //draw the window
+        ofSetColor(0);
+        ofDrawRectangle(0, 0, 1024, 40);
+        ofDrawRectangle(984, 0, 40, 768);
+        ofDrawRectangle(0, 0, 40, 768);
+        ofDrawRectangle(0, 728, 1024, 40);
+        
+        ofSetColor(255,255,255);
+        ofDrawBitmapString("G0 to the first scene: press  Up", 13, 760);
         
         
         //cat2- gray cat
