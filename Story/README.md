@@ -20,28 +20,45 @@ An explanation of your process in the .md
 
 -----------------------------------------
 
-## My story: A Love Story
+# My story: A Love Story
+The story is about a stray cat falling in love with an indoor cat. It is based on the true story:
 
-A black cat is sitting on a tree. A gray cat is watching her inside a home from a window. 
+The black cat's name is Katayoon (aka the stray cat):
+
+  <img src="Media/kat.JPG" width="200"> 
+
+The indoor cat's name is Gorbesun (aka my cat):
+
+  <img src="Media/gorbesun.PNG" width="200"> 
+
+
+
+   The Story: 
+  A black cat is sitting on a tree. A gray cat is watching her inside a home from a window. 
 These two fall in love.
 
 ### First scene:
 
 -Moving the black cat's tail with mouse movement.
 
--The gray cat moves to a given x when the left bottun is pressed.
+-The gray cat moves to a given x when the left or right bottun is pressed.
 
 ![Screenshot](Media/1.gif)
 
 Adding a gui slider to have more control over the black cat:
 ![Screenshot](Media/2.gif)
+  
 ### Second scene:
 ![Screenshot](Media/3.gif)
-
-
-## Final:
-## Combining two scenes:
+  
+### When touching paws a heart appears + adding the window frame
 ![Screenshot](Media/4.gif)
+
+
+## Final scene:
+## Combining two scenes:
+You can toggle between the two scenes by pushing the up and down arrow keys on the keyboard. 
+<img src="Media/5.gif" width="1000">
 
 
 
