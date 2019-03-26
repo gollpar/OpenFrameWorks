@@ -23,7 +23,7 @@ An explanation of your process in the .md
 ## My story: A Love Story
 The story is about a stray cat falling in love with an indoor cat. It is based on the true story:
 
-The black cat's name is Katayoon:
+The black cat's name is Katayoon (aka the stray cat):
 ![Screenshot](Media/kat.JPG)   
 The indoor cat's name is Gorbesun (aka my cat):
 ![Screenshot](Media/gorbesun.PNG)
