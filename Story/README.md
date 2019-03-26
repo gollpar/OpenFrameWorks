@@ -21,6 +21,12 @@ An explanation of your process in the .md
 -----------------------------------------
 
 ## My story: A Love Story
+The story is about a stray cat falling in love with an indoor cat. It is based on the true story:
+
+The black cat's name is Katayoon:
+![Screenshot](Media/kat.jpeg)
+The indoor cat's name is Gorbesun (aka my cat):
+![Screenshot](Media/gorbesun.png)
 
 A black cat is sitting on a tree. A gray cat is watching her inside a home from a window. 
 These two fall in love.
@@ -38,10 +44,13 @@ Adding a gui slider to have more control over the black cat:
 ### Second scene:
 ![Screenshot](Media/3.gif)
 
-
-## Final:
-## Combining two scenes:
+### When touching paws a heart appears + adding the window frame
 ![Screenshot](Media/4.gif)
+
+
+## Final scene:
+## Combining two scenes:
+![Screenshot](Media/5.gif)
 
 
 
