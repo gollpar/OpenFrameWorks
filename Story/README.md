@@ -41,7 +41,7 @@ These two fall in love.
 
 -Moving the black cat's tail with mouse movement.
 
--The gray cat moves to a given x when the left bottun is pressed.
+-The gray cat moves to a given x when the left or right bottun is pressed.
 
 ![Screenshot](Media/1.gif)
 
