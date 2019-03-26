@@ -24,10 +24,12 @@ An explanation of your process in the .md
 The story is about a stray cat falling in love with an indoor cat. It is based on the true story:
 
 The black cat's name is Katayoon (aka the stray cat):
-<img src="Media/kat.JPG" width="200"> 
+
+  <img src="Media/kat.JPG" width="200"> 
 
 The indoor cat's name is Gorbesun (aka my cat):
-<img src="Media/gorbesun.PNG" width="200"> 
+
+  <img src="Media/gorbesun.PNG" width="200"> 
 
 
 
