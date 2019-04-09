@@ -30,6 +30,7 @@ The black cat's name is Katayoon (aka the stray cat):
 The indoor cat's name is Gorbesun (aka my cat):
 
   <img src="Media/gorbesun.PNG" width="200"> 
+  <img src="Media/gorbesun3.jpg" width="200"> 
 
 
 
