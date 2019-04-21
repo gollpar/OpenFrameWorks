@@ -30,3 +30,14 @@ Organization of repository
 Documentation
 
 
+----------------
+### My API project:
+
+Comparing the weather of my hometown Tehran and New York city's using Dark sky API.
+![Screenshot](media/1.png)
+Adding texts and fonts:
+![Screenshot](media/2.png)
+Adding color: The color range is between blue and red, the lower temprature makes the color more blue and the warmer tempratures makes it more red.
+![Screenshot](media/3.png)
+The size of the circles changes with the temprature. The warmer weather makes a bigger circle.
+![Screenshot](media/4.png)
