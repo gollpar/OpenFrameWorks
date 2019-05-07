@@ -32,7 +32,9 @@ Using elements from New York city and Tehran (my hometown)
 ![screenshot](documentation/8.jpg)
 
 ### Final Design:
+
 Concentrate and color the pattern!
+
 ![gif](final.gif)
 
 
