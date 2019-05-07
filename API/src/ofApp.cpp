@@ -10,10 +10,10 @@ void ofApp::setup(){
     textFont.load("Comfortaa.ttf", 10);
     
     //Tehran
-    std::string url = "https://api.darksky.net/forecast/ecf1ca45225f2390b98fbcdcd569a0af/35.6892,51.3890";
+    std::string url = "https://api.darksky.net/forecast/your key/35.6892,51.3890";
     
     //NY
-    std::string url2 = "https://api.darksky.net/forecast/ecf1ca45225f2390b98fbcdcd569a0af/40.7128,-74.0060";
+    std::string url2 = "https://api.darksky.net/forecast/your key/40.7128,-74.0060";
     
     
     // Now parse the JSON
