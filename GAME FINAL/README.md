@@ -36,6 +36,7 @@ Using elements from New York city and Tehran (my hometown)
 Concentrate and color the pattern!
 
 ![gif](final.gif)
+![gif](final2.gif)
 
 
 
