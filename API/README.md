@@ -40,5 +40,7 @@ Adding texts and fonts:
 Adding color: The color range is between blue and red, the lower temprature makes the color more blue and the warmer tempratures makes it more red.
 ![Screenshot](media/3.png)
 The size of the circles changes with the temprature. The warmer weather makes a bigger circle.
+Final design:
 ![Screenshot](media/4.png)
+Another day:
 ![Screenshot](media/5.png)
