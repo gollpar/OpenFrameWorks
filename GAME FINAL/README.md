@@ -21,9 +21,16 @@ My goal is to make a concentration tool for Iranian young people like me who fee
 Using elements from New York city and Tehran (my hometown)
 ![screenshot](documentation/5.jpg)
 
+### 
+As the player concentrates, the circle gets bigger.
+![gif](documentation/circle1.gif)
+
+Making the circle not resize to zero everytime that the player looses concentration:
+![gif](documentation/circle2.gif)
+
 ### User test:
 
-![screenshot](documentation/5.1.jpg)
+![screenshot](documentation/5.1.png)
 
 ### Coloring book Idea, a coloring book for your brain:
 
