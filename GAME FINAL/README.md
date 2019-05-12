@@ -22,10 +22,13 @@ Using elements from New York city and Tehran (my hometown)
 ![screenshot](documentation/5.jpg)
 
 ### 
-As the player concentrates, the circle gets bigger.
+As the player concentrates, the circle gets bigger. In this version the circle restarted from zero each time that the player looses concentration.
+
 ![gif](documentation/circle1.gif)
 
-Making the circle not resize to zero everytime that the player looses concentration:
+It was tough to concentrate at the first attempt to resize the circle all the way to its maximom size,so I changed my design.
+This time the circle does not restart to zero. Instead, it is buildable. Meaning that if the user loses concentration the circle stays at the same size until the user concentrates again and make the circle bigger. In this design, the pattern would show up little by little to reveal the final pattern.
+
 ![gif](documentation/circle2.gif)
 
 ### User test:
