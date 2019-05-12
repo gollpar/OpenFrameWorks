@@ -41,3 +41,4 @@ Adding color: The color range is between blue and red, the lower temprature make
 ![Screenshot](media/3.png)
 The size of the circles changes with the temprature. The warmer weather makes a bigger circle.
 ![Screenshot](media/4.png)
+![Screenshot](media/5.png)
